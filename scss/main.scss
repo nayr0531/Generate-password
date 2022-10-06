@@ -1,0 +1,84 @@
+$bg-color: #1c1c1c;
+$primary-color: #1f2937;
+$secondary-color: #10b981;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  background: $bg-color;
+  .container {
+    padding: 10rem 5rem;
+    width: 50rem;
+    background: $primary-color;
+    margin: 5rem auto;
+    h1 {
+      font-size: 4rem;
+      color: #fff;
+      span {
+        display: block;
+        color: $secondary-color;
+      }
+    }
+    p {
+      font-size: 2rem;
+      color: rgba(#fff, 0.8);
+      margin-bottom: 5rem;
+    }
+    hr {
+      margin: 3rem 0;
+      opacity: 0.1;
+    }
+    .actions {
+      height: 3.8rem;
+      display: flex;
+      justify-content: space-between;
+      label {
+        color: #fff;
+      }
+      label,
+      select {
+        font-size: 1.2rem;
+      }
+      select {
+        margin-right: 0.5rem;
+      }
+      #btn-generate-password {
+        font-size: 2rem;
+        background: #10b981;
+        border: none;
+        outline: none;
+        height: min-content;
+        color: #fff;
+        border-radius: 0.5rem;
+        padding: 0.8rem 1.8rem;
+        cursor: pointer;
+      }
+    }
+
+    .generated-password {
+      display: flex;
+      justify-content: space-between;
+      div {
+        background: lighten($primary-color, 5%);
+        width: 18.5rem;
+        height: 4rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        color: $secondary-color;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 0.8rem;
+        overflow: hidden;
+        white-space: nowrap;
+        &:hover {
+          background: lighten($primary-color, 6%);
+        }
+      }
+    }
+  }
+}
