@@ -9,13 +9,14 @@ body {
   background: #1c1c1c;
 }
 body .container {
-  padding: 10rem 5rem;
-  width: 50rem;
+  border-radius: 0.5rem;
+  padding: 5rem 2.5rem;
+  width: 40rem;
   background: #1f2937;
   margin: 5rem auto;
 }
 body .container h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   color: #fff;
 }
 body .container h1 span {
@@ -23,13 +24,13 @@ body .container h1 span {
   color: #10b981;
 }
 body .container p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 body .container hr {
   margin: 3rem 0;
-  opacity: 0.1;
+  opacity: 0.06;
 }
 body .container .actions {
   height: 3.8rem;
@@ -41,13 +42,18 @@ body .container .actions label {
 }
 body .container .actions label,
 body .container .actions select {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 body .container .actions select {
   margin-right: 0.5rem;
+  outline: none;
+  border: none;
+  border-radius: 0.2rem;
+  background: #085b40;
+  color: #fff;
 }
 body .container .actions #btn-generate-password {
-  font-size: 2rem;
+  font-size: 1.5rem;
   background: #10b981;
   border: none;
   outline: none;
@@ -65,8 +71,8 @@ body .container .generated-password {
 }
 body .container .generated-password div {
   background: #283547;
-  width: 18.5rem;
-  height: 4rem;
+  width: 16rem;
+  height: 3.5rem;
   border-radius: 0.5rem;
   cursor: pointer;
   color: #10b981;
@@ -78,4 +84,51 @@ body .container .generated-password div {
 }
 body .container .generated-password div:hover {
   background: #2a384b;
+}
+
+@media only screen and (max-width: 750px) {
+  body .container {
+    width: 35rem;
+  }
+  body .container .actions {
+    flex-direction: column;
+  }
+  body .container .actions #btn-generate-password {
+    margin-bottom: 1rem;
+  }
+  body .container .generated-password {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+@media only screen and (max-width: 575px) {
+  body {
+    min-width: 270px;
+    height: 100vh;
+  }
+  body .container {
+    padding: 2rem 0.5rem;
+    width: 100%;
+    height: 100%;
+    margin: 0rem;
+    border-radius: 0rem;
+  }
+  body .container h1 {
+    font-size: 1.6rem;
+  }
+  body .container P {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  body .container .actions label, body .container .actions select {
+    font-size: 0.9rem;
+  }
+  body .container .actions #btn-generate-password {
+    font-size: 1rem;
+  }
+  body .container .generated-password div {
+    font-size: 1rem;
+    height: 3rem;
+  }
 }

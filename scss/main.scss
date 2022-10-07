@@ -1,7 +1,9 @@
+// CSS Variables
 $bg-color: #1c1c1c;
 $primary-color: #1f2937;
 $secondary-color: #10b981;
 
+// Reset all elements tag
 * {
   margin: 0;
   padding: 0;
@@ -9,15 +11,18 @@ $secondary-color: #10b981;
   font-family: "Karla", sans-serif;
 }
 
+// Style body and body child elements
 body {
   background: $bg-color;
   .container {
-    padding: 10rem 5rem;
-    width: 50rem;
+    border-radius: 0.5rem;
+
+    padding: 5rem 2.5rem;
+    width: 40rem;
     background: $primary-color;
     margin: 5rem auto;
     h1 {
-      font-size: 4rem;
+      font-size: 3rem;
       color: #fff;
       span {
         display: block;
@@ -25,13 +30,13 @@ body {
       }
     }
     p {
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: rgba(#fff, 0.8);
-      margin-bottom: 5rem;
+      margin-bottom: 4rem;
     }
     hr {
       margin: 3rem 0;
-      opacity: 0.1;
+      opacity: 0.06;
     }
     .actions {
       height: 3.8rem;
@@ -42,13 +47,18 @@ body {
       }
       label,
       select {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
       select {
         margin-right: 0.5rem;
+        outline: none;
+        border: none;
+        border-radius: 0.2rem;
+        background: darken($secondary-color, 20%);
+        color: #fff;
       }
       #btn-generate-password {
-        font-size: 2rem;
+        font-size: 1.5rem;
         background: #10b981;
         border: none;
         outline: none;
@@ -65,8 +75,8 @@ body {
       justify-content: space-between;
       div {
         background: lighten($primary-color, 5%);
-        width: 18.5rem;
-        height: 4rem;
+        width: 16rem;
+        height: 3.5rem;
         border-radius: 0.5rem;
         cursor: pointer;
         color: $secondary-color;
@@ -78,6 +88,63 @@ body {
         &:hover {
           background: lighten($primary-color, 6%);
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  body{
+    .container{
+      width: 35rem;
+      .actions{
+        flex-direction: column;
+        #btn-generate-password{
+          margin-bottom: 1rem;
+        }
+      }
+      .generated-password{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  body{
+    min-width: 270px;
+    height: 100vh;
+    .container{
+      padding: 2rem 0.5rem;
+      width: 100%;
+      height: 100%;
+      margin: 0rem;
+      border-radius: 0rem;
+      h1{
+        font-size: 1.6rem;
+      }
+      P{
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+      .actions{
+        label,select{
+          font-size: 0.9rem;
+        }
+        #btn-generate-password{
+          font-size: 1rem;
+    
+        }
+      }
+      .generated-password{
+        div{
+          font-size: 1rem;
+          height: 3rem;
+
+        }
+        
       }
     }
   }
