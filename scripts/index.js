@@ -10,11 +10,13 @@ const generate_password_2 = document.querySelector("#generated-password-2");
 const password_length = document.querySelector("#length");
 const password_symbols = document.querySelector("#symbols");
 
+// Copy password function
 const copy_password = (e)=>{
   navigator.clipboard.writeText(e.target.textContent)
   alert(`Password has been copied: ${e.target.textContent}`)
 }
 
+//When any of 2 password has been clicked
 generate_password_1.addEventListener("click", (e)=>{
   copy_password(e)
 })
