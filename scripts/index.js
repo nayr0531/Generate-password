@@ -12,7 +12,7 @@ const password_symbols = document.querySelector("#symbols");
 
 const copy_password = (e)=>{
   navigator.clipboard.writeText(e.target.textContent)
-  alert(`Copy the text: ${e.target.textContent}`)
+  alert(`Password has been copied: ${e.target.textContent}`)
 }
 
 generate_password_1.addEventListener("click", (e)=>{
