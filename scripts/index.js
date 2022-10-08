@@ -10,6 +10,14 @@ const generate_password_2 = document.querySelector("#generated-password-2");
 const password_length = document.querySelector("#length");
 const password_symbols = document.querySelector("#symbols");
 
+//Loop to create 15 option elements
+for(let i = 15; i <= 15; i--){
+  if(i === 0){
+    break;
+  }
+  password_length.innerHTML += `<Option value="${i}">${i}</Option>`
+}
+
 // Copy password function
 const copy_password = (e)=>{
   navigator.clipboard.writeText(e.target.textContent)
